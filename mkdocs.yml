@@ -73,9 +73,7 @@ theme:
   logo: img/logo_hfc_white.svg
 
 plugins:
-- search:
-plugins:
-- search:
+- search
 - mkdocstrings
 - autolinks
 - macros 
