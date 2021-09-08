@@ -2,6 +2,7 @@
 /*@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");*/
 @import url("https://fontlibrary.org/face/trueno");
 
+/* barra laterale toc integrata*/
 @media screen and (min-width:  76.25em){
 .md-nav--integrated .md-nav__link[for=__toc]~.md-nav {border-left: .1rem dashed var(--md-primary-fg-color)!important;     margin-bottom: 1.5em!important;
 }} 
