@@ -60,7 +60,7 @@ theme:
     - navigation.tabs
     - toc.integrate
     - search.suggest
-    - search.highlight
+  # - search.highlight
     - search.share
   palette:
     primary: deep orange
