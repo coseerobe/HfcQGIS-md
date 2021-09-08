@@ -58,6 +58,9 @@ theme:
     - navigation.top
     - navigation.instant
     - navigation.tabs
+    - search.suggest
+    - search.highlight
+    - search.share
   palette:
     primary: deep orange
     accent: green
@@ -69,7 +72,10 @@ theme:
   logo: img/logo_hfc_white.svg
 
 plugins:
-- search
+- search:
+plugins:
+  - search:
+      prebuild_index: true
 - mkdocstrings
 - autolinks
 
