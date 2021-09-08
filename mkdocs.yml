@@ -78,7 +78,7 @@ plugins:
     prebuild_index: true
 - mkdocstrings
 - autolinks
-
+- macros 
 - rss:
     abstract_chars_count: 160
     date_from_meta:
