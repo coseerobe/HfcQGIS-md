@@ -1,0 +1,263 @@
+## Project information
+site_name: Help field calculator
+site_url: https://hfcqgis.opendatasicilia.it/
+site_description: Help funzioni calcolatore di campi di QGIS
+site_author: by OpenDataSicilia.it
+
+## Repository
+repo_name: OpenDataSicilia/HfcQGIS
+repo_url: https://github.com/opendatasicilia/HfcQGIS-md
+edit_uri: edit/main/docs/ #disables edit button
+
+# Copyright
+copyright: <a href="https://hfcqgis.opendatasicilia.it/privacy/" title="Informativa privacy estesa" target="_parent">Privacy</a> | <a href="https://hfcqgis.opendatasicilia.it/LICENSE_my/" title="Licenza" target="_parent" class="link-dark text-decoration-none">Licenza</a>
+
+## Social Media
+extra:
+  manifest: "manifest.webmanifest"
+  social:
+    - icon: fontawesome/solid/home
+      link: https://hfcqgis.opendatasicilia.it/
+      name: Home Page
+    - icon: fontawesome/brands/twitter
+      link: http://twitter.com/opendatasicilia
+      name: account twitter
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/groups/opendatasicilia/
+      name: gruppo facebook OpenDataSicilia
+    - icon: fontawesome/brands/github
+      link: https://github.com/opendatasicilia/HfcQGIS-md
+      name: Repository GitHub
+    - icon: fontawesome/brands/telegram
+      link: http://twitter.com/opendatasicilia
+      name: gruppo Telegram OpenDataSicilia
+    - icon: fontawesome/solid/envelope
+      link: https://groups.google.com/forum/#!forum/opendatasicilia
+      name: mailing list OpenDataSicilia
+    - icon: fontawesome/brands/paypal
+      link: https://www.paypal.com/paypalme/pigrecoinfinito
+      name: Donazione a HfcQGIS con PayPal
+    - icon: fontawesome/solid/rss
+      link: https://hfcqgis.opendatasicilia.it/feed_rss_created.xml
+      name: Feed RSS
+
+  analytics:
+    provider: google
+    property: UA-122084242-1
+
+## Configuration
+theme:
+  name: material
+  custom_dir: docs/theme_override/
+  static_templates:
+    - 404.html
+  palette:
+    scheme: preference
+  language: it
+  features:
+    - navigation.top
+    - navigation.instant
+    - navigation.tabs
+  palette:
+    primary: deep orange
+    accent: green
+  font:
+    text: Open Sans
+    code: Cutive Mono
+  favicon: img/favicon.ico
+  icon:
+  logo: img/logo_hfc_white.svg
+
+plugins:
+- search
+- mkdocstrings
+- autolinks
+
+- rss:
+    abstract_chars_count: 160
+    date_from_meta:
+        as_creation: "date"
+        as_update: false
+        datetime_format: "%d-%m-%Y"
+      # datetime_format: "%Y-%m-%d"
+    image: https://materialmkdocs-gb.readthedocs.io/it/latest/img/hfc_rss.png
+    feed_ttl: 1440
+    length: 20
+    pretty_print: false
+    #  match_path: ".*"
+    #  url_parameters:
+    #      utm_source: "documentation"
+    #      utm_medium: "RSS"
+    #      utm_campaign: "feed-syndication"
+
+markdown_extensions:
+- toc:
+        permalink: ↵
+- meta
+- mkdocs-click
+- pymdownx.highlight
+- pymdownx.superfences
+- pymdownx.tabbed
+- pymdownx.critic:
+      mode: view
+- pymdownx.betterem:
+      smart_enable: all
+- pymdownx.caret
+- pymdownx.mark
+- pymdownx.tilde
+- pymdownx.smartsymbols
+- admonition
+- pymdownx.details
+- pymdownx.tasklist:
+      clickable_checkbox: true
+- pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+## Custom theme additions
+extra_javascript:
+   - stylesheets/extra.js
+
+extra_css:
+   - stylesheets/gbextra.css
+
+## Page tree
+nav:
+    - Home: index.md
+
+    - Field Calculator:
+       - Calcolatore di Campi: calcolatore_campi/field_calc.md
+       - Concetti Field Calc: calcolatore_campi/concetti.md
+       - Interfaccia Field Calc: calcolatore_campi/interfaccia.md
+       - Operatori interfaccia: calcolatore_campi/operatori.md
+       - Concetti tabella attributi: calcolatore_campi/tabella_attributi.md
+
+    - Novità:
+       - Intro Novità:
+           - Quadro sinottico: release/intro_novita.md
+           - QGIS 3.22 | 22/10/2021: release/novita_322.md
+           - QGIS 3.20 | 21/06/2021: release/novita_320.md
+           - QGIS 3.18 | 22/02/2021: release/novita_318.md
+           - QGIS 3.16 | 23/10/2020: release/novita_316.md
+           - QGIS 3.14 | 19/06/2020: release/novita_314.md
+           - QGIS 3.12 | 21/02/2020: release/novita_312.md
+           - QGIS 3.10 | 25/10/2019: release/novita_310.md
+           - QGIS 3.8  | 21/06/2019: release/novita_38.md
+           - QGIS 3.6  | 22/02/2019: release/novita_36.md
+           - QGIS 3.4  | 26/10/2018: release/novita_34.md
+           - QGIS 3.2  | 22/06/2018: release/novita_32.md
+           - QGIS 3.0  | 23/02/2018: release/novita_30.md
+
+    - Funzioni:
+       - Elenco gruppi: gr_funzioni/gruppo_funzioni.md
+       - Aggrega: gr_funzioni/aggrega/aggrega_unico.md
+       - Array: gr_funzioni/array/array_unico.md
+       - Campi e valori: gr_funzioni/campi_e_valori/campi_e_valori_unico.md
+       - Colore: gr_funzioni/colore/colore_unico.md
+       - Condizioni: gr_funzioni/condizioni/condizioni_unico.md
+       - Conversioni: gr_funzioni/conversioni/conversioni_unico.md
+       - Corrispondenza fuzzy: gr_funzioni/corrispondenza_fuzzy/corrispondenza_fuzzy_unico.md
+       - Custom: gr_funzioni/custom/custom_unico.md
+       - Data ora: gr_funzioni/data_ora/data_ora_unico.md
+       - Espressioni utente: gr_funzioni/espressione_utente/espressione_utente_unico.md
+       - File e percorsi: gr_funzioni/file_e_percorsi/file_e_percorsi_unico.md
+       - Generale: gr_funzioni/generale/generale_unico.md
+       - Geometria: gr_funzioni/geometria/geometria_unico.md
+       - Layer Mappa: gr_funzioni/layer_mappa/layer_mappa_unico.md
+       - Layout: gr_funzioni/layout/layout_unico.md
+       - Maps: gr_funzioni/maps/maps_unico.md
+       - Matematica: gr_funzioni/matematica/matematica_unico.md
+       - Operatori: gr_funzioni/operatori/operatori_unico.md
+       - Raster: gr_funzioni/raster/raster_unico.md
+       - Recente: gr_funzioni/recente/recente.md
+       - Record e attributi: gr_funzioni/record_e_attributi/record_e_attributi_unico.md
+       - Relazioni:  gr_funzioni/relazioni/relazioni.md
+       - Stringhe di testo: gr_funzioni/stringhe_di_testo/stringhe_di_testo_unico.md
+       - Variabili: gr_funzioni/variabili/variabili.md
+
+    - Esempi svolti:
+        # - Uso delle funzioni: esempi/lista_esempi.md
+        - Esempi svolti:
+           - Lista esempi: esempi/lista_esempi.md
+           - Campo area: esempi/add_col_area.md
+           - Campi coordinate: esempi/add_coord_xy.md
+           - Campo virtuale: esempi/add_campo_virtuale.md
+           - Campo quota z: esempi/add_col_z.md
+           - Etichettare: esempi/etichette.md
+           - Aggiornare geometria: esempi/agg_geom.md
+           - Conversione: esempi/conversione.md
+           - Tematizzare: esempi/tematizzare.md
+           - Legenda: esempi/espressione_regolare.md
+           - Selezione: esempi/select_with_aggregate.md
+           - Core area: esempi/core_area.md
+           - Sposta etichette: esempi/sposta_etichetta_linea.md
+           - Conteggio valori: esempi/conteggio.md
+           - Centroidi linee curve: esempi/centroid_linee.md
+           - Conta i punti nel poligono: esempi/conta_punti_in_poligono.md
+           - Somma lunghezze nel poligono: esempi/somma_lunghezze_nel_poligono.md
+           - Conta punti nel poligono per categorie: esempi/punti_in_poligoni_categorie.md
+           - Nascondi etichette: esempi/nascondi_etichette.md
+           - Calcolo area poligoni nel reticolo: esempi/calcolo_area_poligoni_reticolo.md
+           - Spatial join: esempi/spatial_join.md
+           - Unica label: esempi/unica_etichetta_più_poligoni.md
+           - Elenco comuni: esempi/elenco_comuni_attraversati_fiume.md
+           - Rotazione pattern lineare: esempi/rotazione_pattern.md
+           - Numerazione poligoni in base a relazione spaziale: esempi/numerazione_poligoni_rel_spaziale.md
+           - Assegnare categoria prevalente: esempi/assegnare_cat_prevalente.md
+           - Creare Hub lines: esempi/hub_lines.md
+           - Aggrega con SR differenti: esempi/aggregare_con_sr_differenti.md
+           - Distanze progressive chilometriche: esempi/distanze_progressive_chilometriche.md
+           - Aggregare elementi adiacenti: esempi/aggregare_elementi_contigui.md
+           - Linea minima distanza tra due punti: esempi/linea_min_distanza.md
+           - Creare campo somma cumulativa: esempi/add_campo_sum_cumulativo.md
+           - Aggiungere punto a linea: esempi/aggiungere_punto_a_linea.md
+           - Drilldown form multiple: esempi/drilldown_form_multiple.md
+           - Selezionare primi n valori: esempi/selezionare_primi_n_valori.md
+           - Generalizzare isoipse: esempi/generalizzare_linee.md
+           - Campo coord in lat lon: esempi/campo_coord_in_lat_lon.md
+           - Calcolo incrementi giornalieri: esempi/calcolo_incrementi_giornalieri.md
+           - Tracciare un grafico: esempi/tracciare_grafico_generatore_geometrie.md
+           - Elenco ordinato di Comuni: esempi/elenco_ordinato_comuni_attraversati.md
+           - Etichettare con chiave-valore: esempi/etichettare_chiave_valore.md
+           - Etichettare itinerario con elenco ordinato Comuni: esempi/etichettare_itinerario_elenco_comuni_attraversati.md
+           - Etichette formattate diversi stili: esempi/etichette_formattate_diversi_stili.md
+           - Selezionare vertici duplicati: esempi/select_duplicate_vertices.md
+           - Conteggio caratteri diversi: esempi/conteggio_caratteri_diversi.md
+           - Distanza minima tra due vettori: esempi/linea_min_distanza2.md
+           - Lunghezze segmenti di un poligono: esempi/lunghezze_segmenti_poligono.md
+           - Fill-down con QGIS: esempi/fill-down.md
+           - Finestra temporale: esempi/finestra_temporale.md
+           - Rotazione simbolo parallelo ad una linea: esempi/rotazione_simbolo_parallelo_linea.md
+           - Livello acqua: esempi/livello_acqua.md
+           - Layer più vicino: esempi/layer_vicino.md
+           - Eliminare testo tra parentesi: esempi/eliminare_testo_tra_parentesi.md
+           - Segmento minimo facciata strada: esempi/segmento_minimo_facciata_strada.md
+        - Provaci tu: mettiti_alla_prova.md
+
+    - Corso di Formazione: corso_formazione/corso_di_formazione.md
+
+    - Lavora con Noi:
+        - Supporter: supporter.md
+        - Parlano di noi: parlano_di_noi.md
+        # - Contribuire a HfcQGIS: contributing.md
+
+    - Sostieni:
+        - Contribuire: contributing.md
+        - Da documentare: gr_funzioni/da_documentare.md
+
+    - Sitografia: sitografia_field_calc.md
+
+    - About:
+        - OpenDataSicilia: ods.md
+        - Autore HfcQGIS: autore.md
+        - Webmaster: webmaster/gbvitrano.md
+        - Traduzione: traduzione.md
+        - Release: release.md
+        - Changelog: changelog.md
+        - Pull Request: pull-request.md
+        - Risorse: risorse.md
+        - Disclaimer: disclaimer.md
+        - Licenza: LICENSE_my.md
+      #  - Informativa privacy estesa: privacy.md
+    # - Webmaster: webmaster/gbvitrano.md
+  # - Tags: tags.md
